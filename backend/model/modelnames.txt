@@ -1,0 +1,5 @@
+'all-MiniLM-L12-v2' (better than your current)
+
+'all-mpnet-base-v2' (very high accuracy)
+
+'multi-qa-MiniLM-L6-cos-v1' (QA-focused)
