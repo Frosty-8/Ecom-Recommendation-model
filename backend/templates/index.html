@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sunglass Product API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sunglass Product API</h1>
+        <p>This page uses Flask instead of FastAPI. Products and recommendations are available via endpoints.</p>
+        <div class="card">
+            <h2>Endpoints:</h2>
+            <ul>
+                <li><strong>/products</strong>?page=1&per_page=10</li>
+                <li><strong>/recommend</strong>?query=your_query</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

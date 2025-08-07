@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.titles }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>{{ product.titles }}</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ product.images }}" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <p><strong>Price:</strong> ₹{{ product.prices }}</p>
+                <p><strong>Rating:</strong> {{ product.ratings }}</p>
+                <a href="{{ product.purls }}" target="_blank" class="btn btn-success">Buy Now</a>
+            </div>
+        </div>
+
+        <hr>
+        <h4>Recommended Products</h4>
+        <div class="row">
+            {% for rec in recommendations %}
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="{{ rec.images }}" class="card-img-top" alt="{{ rec.titles }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ rec.titles }}</h5>
+                            <p class="card-text">₹{{ rec.prices }}</p>
+                            <a href="{{ rec.purls }}" target="_blank" class="btn btn-info">View</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
